@@ -6,7 +6,7 @@ It provides a simple REST API to measure semantic similarity between protein seq
 
 ---
 
-**The cmparison results may be inaccurate. The goal of the project was to learn FastAPI & integrate with ESM-2. Feel free to copy the code and use it as you want.**
+**The comparison results may be inaccurate. The goal of the project was to learn FastAPI & integrate with ESM-2. Feel free to copy the code and use it as you want.**
 
 ---
 

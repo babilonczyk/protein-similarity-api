@@ -17,6 +17,14 @@ model_mapping = {"esm_2_650m": get_embedding_esm_2_650m}
 
 
 # ----------------------------------------------------------------------
+@app.get("/")
+def root():
+    return {
+        "message": "API is running. Use POST /compare to compare protein sequences."
+    }
+
+
+# ----------------------------------------------------------------------
 @app.post("/compare")
 def compare(request: CompareRequest):
     model = request.model

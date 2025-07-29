@@ -1,14 +1,12 @@
 # protein-similarity-api
 
-A lightweight, production-ready FastAPI service for comparing protein sequences using state-of-the-art transformer embeddings (ESM-2).
+A lightweight, FastAPI service for comparing protein sequences using state-of-the-art transformer embeddings (ESM-2).
 
 It provides a simple REST API to measure semantic similarity between protein sequences, returning a similarity score based on cosine distance in embedding space.
 
 ---
 
-## Why this matters?
-
-Protein similarity is at the heart of functional annotation, homology detection, and structure prediction. This API lets anyone (researcher, student, dev) compare protein sequences using powerful models.
+**The cmparison results may be inaccurate. The goal of the project was to learn FastAPI & integrate with ESM-2. Feel free to copy the code and use it as you want.**
 
 ---
 
@@ -55,10 +53,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 uvicorn main:app --reload
-```
-
-## How to deploy it?
-
-```
-
 ```

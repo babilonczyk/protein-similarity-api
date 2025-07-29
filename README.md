@@ -7,8 +7,7 @@ It provides a simple REST API to measure semantic similarity between protein seq
 
 ## Why this matters?
 
-Protein similarity is at the heart of functional annotation, homology detection, and structure prediction.  
-This API lets anyone (researcher, student, dev) compare protein sequences using powerful models.
+Protein similarity is at the heart of functional annotation, homology detection, and structure prediction. This API lets anyone (researcher, student, dev) compare protein sequences using powerful models.
 
 ---
 
@@ -28,10 +27,12 @@ This API lets anyone (researcher, student, dev) compare protein sequences using 
 Compare two sequences and get similarity:
 
 #### Request:
+
 ```json
 {
   "sequence_1": "MSSKVIFF...",
-  "sequence_2": "MTTRLIFF..."
+  "sequence_2": "MTTRLIFF...",
+  "model": "esm_2_650m"
 }
 ```
 
@@ -39,18 +40,24 @@ Compare two sequences and get similarity:
 
 ```json
 {
-  "cosine_similarity": 0.87,
-  "classification": "likely homologous",
+  "cosine_similarity": 0.57,
+  "classification": "moderate similarity (possible remote homolog)",
   "model": "ESM-2 650M"
 }
 ```
 
 ## How to run it?
 
-```
+```shell
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+uvicorn main:app --reload
 ```
 
-## How to deploy it? 
+## How to deploy it?
 
 ```
+
 ```
